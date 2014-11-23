@@ -19,7 +19,7 @@
 <body>
 	<div id="wrap">
 		<div id="top">
-		
+			<jsp:include page="share/header.jsp" />
 		</div>
 		<div id="middle">
 			<div id="content">
@@ -97,6 +97,7 @@
 		</div>
 
 		<div id="bottom">
+			<jsp:include page="share/footer.jsp" />
 		</div>
 	</div>
 </body>
@@ -104,10 +105,8 @@
 	$("#btn").click(function() {
 		if($("#id").val() == "") {
 			alert("id을 입력해주십시오");
-		} else if($("#nickname").val() == "") {
-			alert("Nick-Name을 입력해주십시오");
 		} else if($("#name").val() == "") {
-			alert("Name을 입력해주십시오");
+			alert("이름을 입력해주십시오");
 		} else if($("#password").val() == "") {
 			alert("비밀번호를 입력해주십시오");
 		} else if($("#password").val() != $("#password-confirm").val()) {
