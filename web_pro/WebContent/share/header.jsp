@@ -11,11 +11,11 @@
 	</div>
 
 	<c:choose>
-		<c:when test="${sessionScope.user.name == null }">
+		<c:when test="${sessionScope.inputid == null }">
 			<div id="login">
-				<form action="multiServlet" enctype="multipart/form-data" method="POST">
+				<form action="loginProcess.jsp" enctype="multipart/form-data" method="POST" >
 					<ul>
-						<li><span>아이디</span> <input type="text" name="inputemail"></li>
+						<li><span>아이디</span> <input type="text" name="inputid" id="inputid" value="${sessionScope.inputid}"></li>
 						<li><span>비밀번호</span> <input type="password" name="inputpwd"></li>
 						<li><input type="submit" id="login_button" value="로그인"></li>
 					</ul>
@@ -26,7 +26,7 @@
 		<c:otherwise>
 			<div id="loginsuccess">
 				<form method="post" action="logout.jsp">
-					안녕하세요. <b>${sessionScope.user.name }</b> 님 반갑습니다.
+					안녕하세요. <b>${sessionScope.inputid }</b> 님 반갑습니다.
 					<a href="signup.jsp?id=${sessionScope.user.user_id }">개인정보수정</a>
 					<input type="submit" id="logout_button" value="로그아웃">
 				</form>

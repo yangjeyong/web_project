@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <title>뒷담까는 사람들의 대화~ 뒷담화</title>
-<link href="stylesheets/loginPage.css" rel="stylesheet" type="text/css">
+
 <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
 <script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
@@ -29,7 +29,7 @@
 					</div>
 					<div class="container">
 						
-						<form id="form" class="form-horizontal" action="multiServlet" enctype="multipart/form-data" method="POST">
+						<form id="form" action="register.jsp" method="post">
 							<fieldset>
 								<legend class="legend">회원 가입</legend>
 
@@ -37,8 +37,8 @@
 										<div class="control-group">
 											<label class="control-label" for="email">아이디</label>
 												<div class="controls">
-													<input id="id" class="inputbox" type="id" placeholder="아이디"
-													name="id" value="${sessionScope.user.id }">
+													<input id="id" class="inputbox" type="text" placeholder="아이디"
+													name="id">
 												</div>											
 										</div>
 
@@ -47,7 +47,7 @@
 										<label class="control-label" for="name">이름</label>
 										<div class="controls">
 											<input id="name" class="inputbox" type="text" placeholder="이름" 
-											name="name" value="${sessionScope.user.name }">
+											name="name">
 										</div>
 									</div>
 
@@ -86,7 +86,6 @@
 										<input id="btn" type="button" class="btn btn-primary" value="수정">
 										<a href="#" class="btn btn-primary" data-action="delete" data-id="<%=id %>">탈퇴 </a>
 									<%} %>
-									<input id="cancel" type="button" class="btn" value="취소하기">
 							</div>
 						</form>
 						
@@ -116,16 +115,6 @@
 		} else {
 			$("#form").submit();
 		}
-	});
-	$("#cancel").click(function() {
-		history.back();
-	});
-
-	$("a[data-action = 'delete']").click(function(){
-		if(confirm("정말로 삭제 하시겠습니까?")){
-			location = 'delete.jsp?id=' + $(this).attr('data-id');
-			}
-		return false;
 	});
 </script>
 </html>
