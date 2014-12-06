@@ -47,7 +47,10 @@
 					while(rs.next()) {
 						String keyword = rs.getString(2);
 					%>
-						<tr class="keyword"><td><a href="same_kwd_list.jsp?keyword=<%=keyword%>"><%out.println(rank + ". " + keyword);%></a></td></tr>
+						<tr class="keyword">
+						<td><%out.println(rank + ". ");%></td>
+						<td><a href="same_kwd_list.jsp?keyword=<%=keyword%>"><%=keyword%></a></td>
+						</tr>
 					<% 
 					rank++;
 					}
@@ -62,7 +65,6 @@
 				</table>
 			</div>
 			<div id="enter_button">
-						 <h1><span class="headtext">자유 토론방 입장</span></h1>
 						<input type="button" id="goModify" class="btn" value="입장하기" OnClick="location='list.jsp'">
 				</div>
 		</div>
