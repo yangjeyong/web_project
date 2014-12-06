@@ -6,8 +6,7 @@
 <script src='./javascript/jquery-1.8.2.min.js'></script>
 <div id="header">
 	<div id="logo">
-		<a href="pageServlet"></a>
-		<img src="./images/logo.png" width='300px' height='60px'>
+		<img src="./images/logo.png" width='300px' height='60px' OnClick="location='index.jsp'">
 	</div>
 
 	<c:choose>
@@ -27,7 +26,6 @@
 			<div id="loginsuccess">
 				<form method="post" action="logout.jsp">
 					안녕하세요. <b>${sessionScope.inputid }</b> 님 반갑습니다.
-					<a href="signup.jsp?id=${sessionScope.user.user_id }">개인정보수정</a>
 					<input type="submit" id="logout_button" value="로그아웃">
 				</form>
 			</div>
