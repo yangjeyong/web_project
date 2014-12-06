@@ -19,7 +19,7 @@ CREATE TABLE keyword (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	keyword VARCHAR(50) UNIQUE,
 	count INT
-);
+)ENGINE=innodb;
 
 CREATE TABLE posts (
    post_id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -27,5 +27,17 @@ CREATE TABLE posts (
    writer VARCHAR(100) NOT NULL,
    content TEXT,
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-   count INT
+   count INT,
+   post_like INT,
+   post_dislike INT,
+   keyword VARCHAR(50) NOT NULL,
+   FOREIGN KEY(keyword) REFERENCES keyword(keyword) ON UPDATE CASCADE ON DELETE CASCADE
+)ENGINE=innodb;
+
+CREATE TABLE reply (
+   id INT AUTO_INCREMENT PRIMARY KEY,   
+   post_ids INT NOT NULL,
+   FOREIGN KEY(post_ids) REFERENCES posts(post_id) ON UPDATE CASCADE ON DELETE CASCADE,
+   content TEXT,
+   user_ids VARCHAR(100) NOT NULL
 );
