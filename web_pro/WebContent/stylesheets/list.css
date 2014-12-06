@@ -1,17 +1,10 @@
-/* Reset CSS: from YUI2: Reset CSS */
 html{color:#000;background:#eee;padding:0;	font: 12px/18px 'Arial',"맑은 고딕", "Malgun Gothic", "Gulim", Verdana, Arial, Tahoma;overflow: auto;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{font-size:100%;}
 
-#posts {position:absolute; width:800px; height:250px; top:50%; left:50%; margin-top:-150px; margin-left:-400px;
-				border-top:1px solid black; border-bottom:1px solid black; align:center;}
-#post_nav {width:800px; height:30px; border-bottom:1px solid black;}
-.post_title {width:300px; text-align:center;}
-.post_writer {width:150px; text-align:center;}
-.post_count {width:150px; text-align:center;}
-.post_created_at {width:200px; text-align:center;}
-
-#post_list {width:800px; border-bottom:1px solid black;}
-.post_info {height:50px;}
-
-#write_button{width:800px;}
-#post_bottom{{width:800px;}
-.page_nav{align:center;}
+#posts {width:97%; height:450px;
+	align:center; overflow:scroll; padding:10px;
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-top: none;
+	overflow:scroll;}
+#title {	}
+#button {width:90%; margin-left:290px; top:100%; padding:10px;}
