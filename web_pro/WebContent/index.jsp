@@ -5,7 +5,7 @@
 	Statement stmt =null;
 	ResultSet rs = null;
 	
-	String dbUrl = "jdbc:mysql://localhost:3306/web2014";
+	String dbUrl = "jdbc:mysql://localhost:3306/web2014?useUnicode=true&characterEncoding=utf8";
 	String dbUser = "web";
 	String dbPassword = "asdf";
 	
@@ -29,7 +29,7 @@
 
 		</div>
 		<div id="middle">
-		<form id="form" method=post action="update_keyword.jsp">
+		<form id="form" method=post action="write.jsp">
             <h1><span class="headtext">요즘 대세 KEYWORD TOP 10 <br>키워드를 입력 해주세요</span></h1>
             <input type="text"  name="keyword" id="add_bar" placeholder="  토론하고 싶은 키워드를 추가하세요!">
             <input type="button" value="추가" id="btn">
@@ -47,7 +47,7 @@
 					while(rs.next()) {
 						String keyword = rs.getString(2);
 					%>
-						<tr class="keyword"><td><%out.println(rank + ". " + keyword);%></td></tr>
+						<tr class="keyword"><td><a href="same_kwd_list.jsp?keyword=<%=keyword%>"><%out.println(rank + ". " + keyword);%></a></td></tr>
 					<% 
 					rank++;
 					}
@@ -62,7 +62,7 @@
 				</table>
 			</div>
 			<div id="enter_button">
-						<a href="list.jsp" class="btn btn-mini">입장하기</a>
+						<input type="button" id="goModify" class="btn" value="입장하기" OnClick="location='list.jsp'">
 				</div>
 		</div>
 		<div id="bottom">
