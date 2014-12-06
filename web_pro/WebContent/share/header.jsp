@@ -6,7 +6,7 @@
 <script src='./javascript/jquery-1.8.2.min.js'></script>
 <div id="header">
 	<div id="logo">
-		<img src="./images/logo.png" width='300px' height='60px' OnClick="location='index.jsp'">
+		<img src="./images/logo.png" width='300px' height='60px'>
 	</div>
 
 	<c:choose>
@@ -17,6 +17,7 @@
 						<li><span>아이디</span> <input type="text" name="inputid" id="inputid" value="${sessionScope.inputid}"></li>
 						<li><span>비밀번호</span> <input type="password" name="inputpwd"></li>
 						<li><input type="submit" id="login_button" value="로그인"></li>
+						<li><input type="button" id="signup_button" value="회원가입" OnClick="location='main.jsp'"></li>
 					</ul>
 					<input type="hidden" name="op" value="login">
 				</form>
