@@ -5,7 +5,7 @@
 	PreparedStatement stmt = null;
 	ResultSet rs = null;
 	
-	String dbUrl = "jdbc:mysql://localhost:3306/web2014";
+	String dbUrl = "jdbc:mysql://localhost:3306/web2014?useUnicode=true&characterEncoding=utf8";
 	String dbUser = "web";
 	String dbPassword = "asdf";
 	
