@@ -5,7 +5,7 @@
 	Statement stmt =null;
 	ResultSet rs = null;
 	
-	String dbUrl = "jdbc:mysql://localhost:3306/web2014";
+	String dbUrl = "jdbc:mysql://localhost:3306/web2014?useUnicode=true&characterEncoding=utf8";
 	String dbUser = "web";
 	String dbPassword = "asdf";
 	
@@ -83,7 +83,7 @@
 								    작성시간 : <%=created_at %>
 								    <input type="button" id="goModify" class="btn" value="수정" OnClick="location='modify.jsp?post_id=<%=post_id%>'">
 								    <input type="button" id="goDelete" class="btn" value="삭제" OnClick="location='delete.jsp?post_id=<%=post_id%>'">
-								    <input type="button" id="goComment" class="btn" value="댓글">
+								    <input type="button" id="goComment" class="btn" value="댓글보기" OnClick="location='show.jsp?post_id=<%=post_id%>'">
 								    <input type="button" id="goLike" class="btn" value="좋아요" 
 								    	OnClick="location='like.jsp?post_id=<%=post_id%>&post_like=<%=post_like%>'">
 								    <%=post_like %>
