@@ -8,7 +8,7 @@
 	Statement stmt2 = null;
 	ResultSet rs2 = null;
 	
-	String dbUrl = "jdbc:mysql://localhost:3306/web2014";
+	String dbUrl = "jdbc:mysql://localhost:3306/web2014?useUnicode=true&characterEncoding=utf8";
 	String dbUser = "web";
 	String dbPassword = "asdf";
 	
@@ -43,7 +43,6 @@
 <meta charset="UTF-8">
 <title>글작성</title>
 <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/write.css" rel="stylesheet" type="text/css">
 <script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <body>
@@ -60,68 +59,64 @@
 					<span class="head2text">상세한 뒷담화<br></span>
 				</h2>
 			</div>
-		<div id="content_show">
-		<form id="form" method=post action="show_ok.jsp?post_id=<%=post_id%>">
-				<div class="control-group">
-					<label class="control-label" for="title">제목</label>
-					<div class="controls">
-						<input id="title" class="inputbox" type="text" readonly="readonly"  name="title" value="<%=title%>">
+			<form id="form" method=post action="show_ok.jsp?post_id=<%=post_id%>">
+				<div id="content_show">
+					<div class="control-group">
+						<label class="control-label" for="title">제목</label>
+						<div class="controls">
+							<input id="title" class="inputbox" type="text" readonly="readonly"  name="title" value="<%=title%>">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="keyword">작성자</label>
+						<div class="controls">
+							<input id="keyword" class="inputbox" type="text" readonly="readonly"  name="writer" value="<%=name%>">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="content">내용</label>
+						<div class="controls">
+							<textarea name="content" rows="8" cols="70" readonly="readonly" style="resize:none"><%=content%></textarea><br>
+						</div>
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="keyword">작성자</label>
-					<div class="controls">
-						<input id="keyword" class="inputbox" type="text" readonly="readonly"  name="writer" value="<%=name%>">
+				<div id = "content_reply">
+					<div class="control-group">
+						<label class="control-label" for="content" style=" font-size: 20pt;">추가의견</label><br>
+							<% while(rs2.next()) {
+											int rep_id = rs2.getInt(1);
+											String user_id = rs2.getString(2);
+											String rep_contents = rs2.getString(3);
+							%>
+						<label class="control-label" for="content">작성자</label>
+						<input id="reply" class="inputbox" type="text" readonly="readonly"  name="title" value="<%=user_id%>">
+						<textarea name="reply_content" rows="2" cols="70" readonly="readonly" style="resize:none" ><%=rep_contents %></textarea>
+						<input type="button" id="goDelete" class="btn" value="삭제" OnClick="location='rep_delete.jsp?rep_id=<%=rep_id%>&post_id=<%=post_id%>'">
+						<br>
+						<hr style="width: 750px;"></hr>
+							<%} %>						
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label" for="content">내용</label>
-					<div class="controls">
-					<textarea name="content" rows="8" cols="70" readonly="readonly" style="resize:none"><%=content%></textarea><br>
-					</div>
-				</div>
-			</div>
-			<div id = "content_reply">
-				<div class="control-group">
-					<label class="control-label" for="content" style=" font-size: 20pt;">추가의견</label><br>
-					<% while(rs2.next()) {
-									int rep_id = rs2.getInt(1);
-									String user_id = rs2.getString(2);
-									String rep_contents = rs2.getString(3);
-					%>
-					<label class="control-label" for="content">작성자</label>
-					<input id="reply" class="inputbox" type="text" readonly="readonly"  name="title" value="<%=user_id%>">
-					
-					<textarea name="reply_content" rows="2" cols="70" readonly="readonly" style="resize:none" ><%=rep_contents %></textarea>
-					<input type="button" id="goDelete" class="btn" value="삭제" OnClick="location='rep_delete.jsp?rep_id=<%=rep_id%>&post_id=<%=post_id%>'">
-					<br>
-					<hr style="width: 750px;"></hr>
-					<%} %>						
+				<div id = "content_coment">
 					<textarea id = "rep_cont" name="rep_cont" cols="70" rows="2" style="resize:none" ></textarea>
-					
 					<input type="submit" id="submit" value = "댓글 등록">
-					
-					
-		<% 	} catch(SQLException e) {
-		out.println( e.toString() );
-		} finally {
-			if (rs != null) try{rs.close();} catch(SQLException e){}
-			if (stmt != null) try{stmt.close();} catch(SQLException e){}
-			if (rs2 != null) try{rs.close();} catch(SQLException e){}
-			if (stmt2 != null) try{stmt.close();} catch(SQLException e){}
-			if (conn != null) try{conn.close();} catch(SQLException e){}
-			
-		}%>
 				</div>
-		</form>
-		
+			<% 	} catch(SQLException e) {
+			out.println( e.toString() );
+			} finally {
+				if (rs != null) try{rs.close();} catch(SQLException e){}
+				if (stmt != null) try{stmt.close();} catch(SQLException e){}
+				if (rs2 != null) try{rs.close();} catch(SQLException e){}
+				if (stmt2 != null) try{stmt.close();} catch(SQLException e){}
+				if (conn != null) try{conn.close();} catch(SQLException e){}
+				
+			}%>
+			</form>
 			<input type="button" id="btns" value="목록으로" OnClick="location='list.jsp'">
 		</div>
-	</div>
 		<div id="bottom">
 			<jsp:include page="share/footer.jsp" />
 		</div>
 	</div>
 </body>
-
 </html>

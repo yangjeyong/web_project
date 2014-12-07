@@ -8,7 +8,7 @@ h1 {font-size:14px; line-height:28px; font-weight:bold;}
 h2 {font-size:12px; line-height:24px; font-weight:bold;}
 /* layout */
 #wrap { height:100%; margin:0 ; padding: 0; background-color: #eee;}
-#middle { width: 100%; height: 100%; margin: 0; padding: 0; }
+#middle { width: 100%;  margin: 0; padding: 0; }
 #content { width: 960px; height: 100%; margin: 0 auto; padding: 0; float:none;}
 #mask { background-color :#000; z-index: 300; position: absolute; left:0; top:0;filter:alpha(opacity=70); opacity:0.7; -moz-opacity:0.7;}
 /* Top */
@@ -44,13 +44,9 @@ h2 {font-size:12px; line-height:24px; font-weight:bold;}
 #content_top #add_button { width: 50px; height: 25px; }
 #content_center {width : 700px; height : 400px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 #content_list { width : 700px; height : 520px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
-#content_show{ width : 700px; height : 250px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
-<<<<<<< HEAD
-#content_reply{ width : 800px; height : 350px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow: auto; overflow-x:hidden;}
-=======
-#content_reply{ width : 800px; height : 350px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow: auto; overflow-x:hidden; padding-top: 10px;}
->>>>>>> c6c89e720b6561baad0f68da6d7b721ec70b7ceb
-#content_coment{width : 700px; height : 80px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
+#content_show{ width : 700px; height : 230px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
+#content_reply{ width : 800px; height : 300px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow-y:scroll; overflow-x:hidden; padding-top: 10px;}
+#content_coment{width : 700px; height : 60px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px; padding-top: 10px;}
 /* text */
 span.headtext{color:#000; font-size: 30px; font-weight : 700; margin:2 5px 5px 10px;  text-align: center; }
 span.head2text{color:#804040; font-size: 25px; font-weight : 500; margin:2 5px 5px 10px;  text-align: center; }
