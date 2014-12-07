@@ -45,7 +45,11 @@ h2 {font-size:12px; line-height:24px; font-weight:bold;}
 #content_center {width : 700px; height : 400px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 #content_list { width : 700px; height : 520px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 #content_show{ width : 700px; height : 250px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
+<<<<<<< HEAD
 #content_reply{ width : 800px; height : 350px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow: auto; overflow-x:hidden;}
+=======
+#content_reply{ width : 800px; height : 350px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow: auto; overflow-x:hidden; padding-top: 10px;}
+>>>>>>> c6c89e720b6561baad0f68da6d7b721ec70b7ceb
 #content_coment{width : 700px; height : 80px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 /* text */
 span.headtext{color:#000; font-size: 30px; font-weight : 700; margin:2 5px 5px 10px;  text-align: center; }
