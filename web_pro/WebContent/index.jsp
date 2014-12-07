@@ -65,8 +65,9 @@
 				</table>
 			</div>
 			<div id="enter_button">
-						<input type="button" id="goModify" class="btn" value="입장하기" OnClick="location='list.jsp'">
-				</div>
+                   <h1><span class="headtext">자유 토론방 입장</span></h1>
+                  <input type="button" id="goModify" class="btn" value="입장하기" OnClick="location='list.jsp'">
+            </div>
 		</div>
 		<div id="bottom">
 			<jsp:include page="share/footer.jsp" />

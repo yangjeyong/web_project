@@ -6,7 +6,7 @@
 <script src='./javascript/jquery-1.8.2.min.js'></script>
 <div id="header">
 	<div id="logo">
-		<img src="./images/logo.png" width='300px' height='60px'>
+		<img src="./images/logo.png" width='300px' height='60px' OnClick="location='index.jsp'">
 	</div>
 
 	<c:choose>

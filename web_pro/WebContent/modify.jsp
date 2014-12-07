@@ -74,7 +74,7 @@ function modifyCheck()
 <html>
 <head>
 <meta charset="UTF-8">
-<title>글 수정</title>
+<title>글작성</title>
 <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
 <link href="stylesheets/write.css" rel="stylesheet" type="text/css">
 <script src='http://code.jquery.com/jquery-latest.js'></script>

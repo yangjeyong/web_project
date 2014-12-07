@@ -31,7 +31,7 @@ h2 {font-size:12px; line-height:24px; font-weight:bold;}
 #login_button { width: 55px; height: 25px;}
 #logout_button {width: 70px; height: 25px; }
 /* Bottom */
-#bottom { width: 100%; height: 75px; margin: 0 auto; padding: 0; background-color: #4e4e4e; border-top: 1px solid #999; border-bottom: 1px solid #999; color:#fff;}
+#bottom { width: 100%; height: 75px; margin: 0 auto; padding: 0; background-color: #4e4e4e; border-top: 1px solid #999; border-bottom: 1px solid #999; color:#fff; }
 #footer { width: 960px; height: 35px; margin: 0 auto; padding:20px 0; text-align: center; }
 #footer a:link, #footer a:visited {text-decoration: none; color:#fff;}
 #footer a:hover, #footer a:active { text-decoration:underline;}
@@ -44,13 +44,9 @@ h2 {font-size:12px; line-height:24px; font-weight:bold;}
 #content_top #add_button { width: 50px; height: 25px; }
 #content_center {width : 700px; height : 400px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 #content_list { width : 700px; height : 520px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
-#content_center #tag_cloud { width: 450px; height: 350px; border: 1px solid #000; margin: 0 auto; border-radius: 10px; }
-#section_1 { width : 700px; height : 400px; padding: 10px 12px 0 7px; margin: 90px auto ; position:relative; z-index: 1000; background-color:#eee; box-shadow: 3px 3px 7px #999; border-radius: 10px; border:1px #a6a6a6 solid;}
-#section_1_exit a{ float: right; width: 20px; height: 10px; padding :0 10px 0 0; text-decoration: none; color:#000;}
-#section_1_exit a:hover { color:#999;}
-#section_1_top { width: 700px; height: 40px; font: 20px 'Arial Black'; padding-top: 7px;}
-#section_1_top hr{ border: 1px solid #d9d9d9; box-shadow: 1px 1px 3px #fff;}
-
+#content_show{ width : 700px; height : 250px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
+#content_reply{ width : 800px; height : 350px ; background : #c7bac6 ; margin: 40px auto; border-radius: 10px; overflow: auto; overflow-x:hidden;}
+#content_coment{width : 700px; height : 80px ; background : #c0c0c0 ; margin: 40px auto; border-radius: 10px;}
 /* text */
 span.headtext{color:#000; font-size: 30px; font-weight : 700; margin:2 5px 5px 10px;  text-align: center; }
 span.head2text{color:#804040; font-size: 25px; font-weight : 500; margin:2 5px 5px 10px;  text-align: center; }
